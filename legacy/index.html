@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<!-- Portfolio v2 — 2025 Trends Edition -->
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Senior Backend Engineer with 6+ years building scalable, high-performance systems. Node.js, Laravel, Microservices, AI/RAG applications." />
+  <meta name="keywords"
+    content="backend developer, Node.js, Laravel, microservices, API integration, software engineer portfolio" />
+  <meta property="og:title" content="Asif Shaikh — Senior Backend Engineer" />
+  <meta property="og:description"
+    content="Building scalable backend systems and intelligent applications with 6+ years of experience." />
+  <meta property="og:type" content="website" />
+  <title>Asif Shaikh — Senior Backend Engineer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap"
+    rel="stylesheet">
+  <!-- Lenis for smooth scroll -->
+  <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+</head>
+
+<body>
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Command Palette -->
+  <div class="cmd-overlay" id="cmdOverlay">
+    <div class="cmd-palette">
+      <div class="cmd-input-wrap">
+        <span class="cmd-search-icon">⌕</span>
+        <input class="cmd-input" id="cmdInput" placeholder="Navigate or search..." autocomplete="off" />
+        <span class="cmd-kbd">ESC</span>
+      </div>
+      <div class="cmd-results" id="cmdResults">
+        <div class="cmd-section-title">Navigation</div>
+        <div class="cmd-item" data-target="#hero">
+          <div class="cmd-item-icon">🏠</div>Home<span class="cmd-item-sub">hero</span>
+        </div>
+        <div class="cmd-item" data-target="#about">
+          <div class="cmd-item-icon">👤</div>About Me<span class="cmd-item-sub">about</span>
+        </div>
+        <div class="cmd-item" data-target="#techstack">
+          <div class="cmd-item-icon">⚙️</div>Tech Stack<span class="cmd-item-sub">stack</span>
+        </div>
+        <div class="cmd-item" data-target="#projects">
+          <div class="cmd-item-icon">🚀</div>Projects<span class="cmd-item-sub">work</span>
+        </div>
+        <div class="cmd-item" data-target="#labs">
+          <div class="cmd-item-icon">🧪</div>Labs / POCs<span class="cmd-item-sub">video</span>
+        </div>
+        <div class="cmd-item" data-target="#experience">
+          <div class="cmd-item-icon">💼</div>Experience<span class="cmd-item-sub">exp</span>
+        </div>
+        <div class="cmd-item" data-target="#contact">
+          <div class="cmd-item-icon">✉️</div>Contact<span class="cmd-item-sub">hire</span>
+        </div>
+        <div class="cmd-section-title">Actions</div>
+        <div class="cmd-item" data-action="theme">
+          <div class="cmd-item-icon">🎨</div>Toggle Theme<span class="cmd-item-sub">light/dark</span>
+        </div>
+        <div class="cmd-item" data-action="email">
+          <div class="cmd-item-icon">📧</div>Send Email<span class="cmd-item-sub">asif@krishaweb.com</span>
+        </div>
+      </div>
+      <div class="cmd-footer">
+        <div class="cmd-footer-item"><span class="cmd-kbd">↵</span> select</div>
+        <div class="cmd-footer-item"><span class="cmd-kbd">↑↓</span> navigate</div>
+        <div class="cmd-footer-item"><span class="cmd-kbd">ESC</span> close</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dot Navigation -->
+  <nav class="dot-nav" id="dotNav">
+    <button class="dot-nav-item active" data-target="#hero" data-label="Home"></button>
+    <button class="dot-nav-item" data-target="#about" data-label="About"></button>
+    <button class="dot-nav-item" data-target="#techstack" data-label="Stack"></button>
+    <button class="dot-nav-item" data-target="#projects" data-label="Projects"></button>
+    <button class="dot-nav-item" data-target="#labs" data-label="Labs"></button>
+    <button class="dot-nav-item" data-target="#experience" data-label="Experience"></button>
+    <button class="dot-nav-item" data-target="#contact" data-label="Contact"></button>
+  </nav>
+
+  <!-- Scroll to Top -->
+  <button class="scroll-top" id="scrollTop">↑</button>
+
+  <!-- Cursor Glow -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav class="nav" id="nav">
+    <div class="container nav-inner">
+      <a href="#" class="nav-logo">
+        asif<span>.</span>dev
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#techstack">Stack</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#labs">Labs</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="cmd-hint" id="cmdHintBtn">⌘ <kbd>K</kbd> search</button>
+        <button class="theme-toggle" id="themeToggle" title="Toggle Theme">🌙</button>
+        <a href="#contact" class="btn btn-primary nav-cta" style="padding:10px 20px;font-size:0.82rem;">Let's Talk →</a>
+        <button class="nav-hamburger" id="navHamburger" title="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <div class="nav-mobile" id="navMobile">
+    <a href="#about" class="mobile-nav-link">About</a>
+    <a href="#techstack" class="mobile-nav-link">Tech Stack</a>
+    <a href="#projects" class="mobile-nav-link">Projects</a>
+    <a href="#labs" class="mobile-nav-link">Labs / POCs</a>
+    <a href="#experience" class="mobile-nav-link">Experience</a>
+    <a href="#contact" class="mobile-nav-link">Contact</a>
+  </div>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="hero-grid"></div>
+      <div class="hero-spotlight" id="heroSpotlight"></div>
+      <div class="hero-orb hero-orb-1"></div>
+      <div class="hero-orb hero-orb-2"></div>
+      <div class="hero-orb hero-orb-3"></div>
+    </div>
+
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-status-bar">
+          <span class="status-chip online">Open to Work</span>
+          <span class="status-chip location">📍 Remote · Worldwide</span>
+          <span class="status-chip">⏱ Responds within 24h</span>
+        </div>
+
+        <h1 class="hero-title">
+          I build systems that<br>
+          <span class="gradient-text" id="typingText">scale under pressure.</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Senior Backend Engineer with <strong>6+ years</strong> designing and shipping production-grade systems — from
+          microservices architectures to AI-powered applications. I turn complex problems into clean, maintainable
+          solutions.
+        </p>
+
+        <div class="hero-cta">
+          <a href="#projects" class="btn-magnetic btn-magnetic-primary" id="magBtn1">
+            <span>View My Work</span>
+            <span>→</span>
+          </a>
+          <a href="#contact" class="btn-magnetic btn-magnetic-outline" id="magBtn2">
+            <span>Get In Touch</span>
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-number">6+</span>
+            <span class="stat-label">Years of experience</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">20+</span>
+            <span class="stat-label">Projects shipped</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">5+</span>
+            <span class="stat-label">Enterprise integrations</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">99%</span>
+            <span class="stat-label">Uptime target</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- Marquee ticker -->
+  <div class="marquee-section">
+    <div class="marquee-track" id="marqueeTrack">
+      <!-- items duplicated for seamless loop -->
+      <div class="marquee-item"><i class="devicon-nodejs-plain colored marquee-icon"></i> Node.js <span
+          class="marquee-dot"></span></div>
+      <div class="marquee-item"><i class="devicon-laravel-original colored marquee-icon"></i> Laravel <span
+          class="marquee-dot"></span></div>
+      <div class="marquee-item"><i class="devicon-nestjs-original colored marquee-icon"></i> NestJS <span
+          class="marquee-dot"></span></div>
+      <div class="marquee-item"><i class="devicon-postgresql-plain colored marquee-icon"></i> PostgreSQL <span
+          class="marquee-dot"></span></div>
+      <div class="marquee-item"><i class="devicon-mongodb-plain colored marquee-icon"></i> MongoDB <span
+          class="marquee-dot"></span></div>
+      <div class="marquee-item"><img src="https://api.iconify.design/simple-icons:stripe.svg"
+          class="si-icon marquee-icon" alt="Stripe">
+        Stripe <span class="marquee-dot"></span></div>
+      <div class="marquee-item"><img src="https://api.iconify.design/simple-icons:ebay.svg" class="si-icon marquee-icon"
+          alt="eBay">
+        eBay API <span class="marquee-dot"></span></div>
+      <div class="marquee-item"><img src="https://api.iconify.design/simple-icons:openai.svg"
+          class="si-icon marquee-icon" alt="OpenAI"> AI / RAG <span class="marquee-dot"></span></div>
+      <div class="marquee-item"><img src="https://cdn.simpleicons.org/n8n" class="si-icon marquee-icon" alt="n8n"> n8n
+        Automation <span class="marquee-dot"></span></div>
+      <div class="marquee-item"><i class="devicon-docker-plain colored marquee-icon"></i> Docker <span
+          class="marquee-dot"></span></div>
+      <div class="marquee-item"><i class="devicon-amazonwebservices-plain colored marquee-icon"></i> AWS <span
+          class="marquee-dot"></span></div>
+      <div class="marquee-item"><img src="https://api.iconify.design/simple-icons:googleanalytics.svg"
+          class="si-icon marquee-icon" alt="GA4"> GA4 <span class="marquee-dot"></span></div>
+      <div class="marquee-item"><img src="https://cdn.simpleicons.org/rabbitmq" class="si-icon marquee-icon"
+          alt="Microservices"> Microservices <span class="marquee-dot"></span></div>
+      <div class="marquee-item"><i class="devicon-symfony-original colored marquee-icon"></i> Symfony <span
+          class="marquee-dot"></span></div>
+      <!-- duplicate for seamless loop -->
+      <div class="marquee-item"><i class="devicon-nodejs-plain colored marquee-icon"></i> Node.js <span
+          class="marquee-dot"></span></div>
+      <div class="marquee-item"><i class="devicon-laravel-original colored marquee-icon"></i> Laravel <span
+          class="marquee-dot"></span></div>
+      <div class="marquee-item"><i class="devicon-nestjs-original colored marquee-icon"></i> NestJS <span
+          class="marquee-dot"></span></div>
+      <div class="marquee-item"><i class="devicon-postgresql-plain colored marquee-icon"></i> PostgreSQL <span
+          class="marquee-dot"></span></div>
+      <div class="marquee-item"><i class="devicon-mongodb-plain colored marquee-icon"></i> MongoDB <span
+          class="marquee-dot"></span></div>
+      <div class="marquee-item"><img src="https://api.iconify.design/simple-icons:stripe.svg"
+          class="si-icon marquee-icon" alt="Stripe">
+        Stripe <span class="marquee-dot"></span></div>
+      <div class="marquee-item"><img src="https://api.iconify.design/simple-icons:ebay.svg" class="si-icon marquee-icon"
+          alt="eBay">
+        eBay API <span class="marquee-dot"></span></div>
+      <div class="marquee-item"><img src="https://api.iconify.design/simple-icons:openai.svg"
+          class="si-icon marquee-icon" alt="OpenAI"> AI / RAG <span class="marquee-dot"></span></div>
+      <div class="marquee-item"><img src="https://cdn.simpleicons.org/n8n" class="si-icon marquee-icon" alt="n8n"> n8n
+        Automation <span class="marquee-dot"></span></div>
+      <div class="marquee-item"><i class="devicon-docker-plain colored marquee-icon"></i> Docker <span
+          class="marquee-dot"></span></div>
+      <div class="marquee-item"><i class="devicon-amazonwebservices-plain colored marquee-icon"></i> AWS <span
+          class="marquee-dot"></span></div>
+      <div class="marquee-item"><img src="https://api.iconify.design/simple-icons:googleanalytics.svg"
+          class="si-icon marquee-icon" alt="GA4"> GA4 <span class="marquee-dot"></span></div>
+      <div class="marquee-item"><img src="https://cdn.simpleicons.org/rabbitmq" class="si-icon marquee-icon"
+          alt="Microservices"> Microservices <span class="marquee-dot"></span></div>
+      <div class="marquee-item"><i class="devicon-symfony-original colored marquee-icon"></i> Symfony <span
+          class="marquee-dot"></span></div>
+    </div>
+  </div>
+
+  <!-- ==================== ABOUT ==================== -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="terminal-dashboard reveal" id="terminalDashboard">
+        <div class="terminal-header">
+          <div class="terminal-dots">
+            <span class="t-dot red"></span>
+            <span class="t-dot yellow"></span>
+            <span class="t-dot green"></span>
+          </div>
+          <div class="terminal-title">asif@backend-prod: ~</div>
+          <div class="terminal-status">● Connected</div>
+        </div>
+        <div class="terminal-body" id="terminalBody">
+          <div class="terminal-line"><span class="t-user">asif@portfolio</span>:<span class="t-path">~</span>$ <span
+              class="t-cmd">whoami</span></div>
+          <div class="terminal-output">Senior Backend Engineer specializing in scalable architectures and AI pipelines.
+          </div>
+          <div class="terminal-line"><span class="t-user">asif@portfolio</span>:<span class="t-path">~</span>$ <span
+              class="t-cmd">ls core-competencies/</span></div>
+          <div class="terminal-output">distributed-systems/ high-performance-apis/ ai-rag-orchestration/
+            event-driven-design/</div>
+          <div class="terminal-line interactive" id="terminalPromptLine">
+            <span class="t-user">asif@portfolio</span>:<span class="t-path">~</span>$ <span class="t-cmd"
+              id="terminalTyped"></span><span class="terminal-cursor">_</span>
+            <input type="text" id="terminalInput" class="terminal-hidden-input" aria-label="Terminal Input" />
+          </div>
+        </div>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-content reveal-left">
+          <div class="section-label">About Me</div>
+          <h2 class="section-title">Engineering at the intersection of scale and simplicity</h2>
+
+          <p class="about-text">
+            I'm a <strong>Senior Backend Engineer</strong> who obsesses over the things users never see — architecture
+            decisions, database query plans, API contracts, and deployment pipelines. Because that's where real
+            reliability is built.
+          </p>
+          <p class="about-text">
+            Over the past 6+ years, I've worked across <strong>startups and product teams</strong>, delivering systems
+            that handle real workloads — from RESTful APIs and multi-tenant SaaS platforms to microservices meshes and
+            AI-augmented pipelines.
+          </p>
+          <p class="about-text">
+            I care deeply about developer experience, clean code, and building things that the next engineer on the team
+            can confidently extend.
+          </p>
+
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <div class="highlight-icon">⚙️</div>
+              <div class="highlight-text">
+                <strong>Systems Thinker</strong>
+                <span>I design for the edge cases, not just the happy path</span>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <div class="highlight-icon">🔗</div>
+              <div class="highlight-text">
+                <strong>Integration Specialist</strong>
+                <span>Stripe, eBay, Mailchimp, GA4, Dialogflow — I speak API</span>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <div class="highlight-icon">🤖</div>
+              <div class="highlight-text">
+                <strong>AI/RAG Applications</strong>
+                <span>Building intelligent pipelines with LLMs and vector search</span>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <div class="highlight-icon">📐</div>
+              <div class="highlight-text">
+                <strong>Architecture-Minded</strong>
+                <span>Microservices, event-driven systems, and clean API boundaries</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-visual reveal-right">
+          <div class="about-card">
+            <div class="code-block">
+              <pre><span class="code-comment">// engineer.profile.ts</span>
+
+<span class="code-keyword">const</span> <span class="code-variable">engineer</span> = {
+  <span class="code-property">name</span>: <span class="code-string">"Asif Shaikh"</span>,
+  <span class="code-property">role</span>: <span class="code-string">"Senior Backend Engineer"</span>,
+  <span class="code-property">experience</span>: <span class="code-number">6</span>, <span class="code-comment">// years</span>
+  <span class="code-property">focus</span>: [
+    <span class="code-string">"Scalable APIs"</span>,
+    <span class="code-string">"Microservices"</span>,
+    <span class="code-string">"AI / RAG Pipelines"</span>,
+  ],
+  <span class="code-property">currentlyExploring</span>: <span class="code-string">"n8n Automation"</span>,
+  <span class="code-property">available</span>: <span class="code-value">true</span>,
+};
+
+<span class="code-keyword">export default</span> <span class="code-variable">engineer</span>;</pre>
+            </div>
+          </div>
+
+          <div class="floating-card floating-card-1">
+            <div class="fc-icon green">✅</div>
+            <div>
+              <div class="fc-label">System Uptime</div>
+              <div class="fc-sub">99.97% last 12 months</div>
+            </div>
+          </div>
+
+          <div class="floating-card floating-card-2">
+            <div class="fc-icon blue">🚀</div>
+            <div>
+              <div class="fc-label">APIs Integrated</div>
+              <div class="fc-sub">10+ production APIs</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bento Grid Stats -->
+      <div class="bento-grid reveal">
+        <!-- <div class="bento-card bento-available">
+          <div class="bento-number">✓</div>
+          <div class="bento-label">Open to Work</div>
+          <div class="bento-desc">Remote roles &amp; contracts worldwide</div>
+        </div> -->
+        <div class="bento-card">
+          <div class="bento-number">6+</div>
+          <div class="bento-label">Years Experience</div>
+        </div>
+        <div class="bento-card">
+          <div class="bento-number">20+</div>
+          <div class="bento-label">Projects Shipped</div>
+        </div>
+        <div class="bento-card">
+          <div class="bento-number">10+</div>
+          <div class="bento-label">APIs Integrated</div>
+        </div>
+        <div class="bento-card bento-health">
+          <div class="bento-health-header">
+            <span class="health-dot pulse"></span>
+            <span class="health-label">System Health</span>
+          </div>
+          <div class="health-metrics">
+            <div class="h-metric">
+              <span class="h-val">99.9%</span>
+              <span class="h-lab">Uptime</span>
+            </div>
+            <div class="h-metric">
+              <span class="h-val">&lt;45ms</span>
+              <span class="h-lab">P99 Latency</span>
+            </div>
+          </div>
+          <div class="health-chart">
+            <svg viewBox="0 0 100 20" class="sparkline">
+              <path d="M0 15 L10 12 L20 18 L30 10 L40 14 L50 5 L60 8 L70 2 L80 10 L90 5 L100 8" fill="none"
+                stroke="var(--accent-cyan)" stroke-width="1.5"></path>
+            </svg>
+          </div>
+        </div>
+        <div class="bento-card bento-wide">
+          <span class="bento-icon-lg">🤖</span>
+          <div class="bento-label">AI &amp; RAG Specialist</div>
+          <div class="bento-desc">LLMs, vector search, intelligent pipelines</div>
+          <div class="bento-tag-group">
+            <span class="bento-tag">OpenAI</span>
+            <span class="bento-tag">LangChain</span>
+            <span class="bento-tag">Qdrant</span>
+          </div>
+        </div>
+        <div class="bento-card bento-wide">
+          <span class="bento-icon-lg">🔀</span>
+          <div class="bento-label">Microservices Architect</div>
+          <div class="bento-desc">Event-driven, independently deployable services</div>
+          <div class="bento-tag-group">
+            <span class="bento-tag">RabbitMQ</span>
+            <span class="bento-tag">Docker</span>
+            <span class="bento-tag">NestJS</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TECH STACK ==================== -->
+  <section class="techstack" id="techstack">
+    <div class="container">
+      <div class="techstack-header reveal">
+        <div class="section-label">Tech Stack</div>
+        <h2 class="section-title">Tools I build with</h2>
+        <p class="section-subtitle" style="margin:0 auto;">
+          A curated set of technologies I use to ship reliable, production-ready software — chosen for the right
+          reasons, not the trendy ones.
+        </p>
+      </div>
+
+      <div class="tech-categories">
+
+        <div class="tech-category reveal" data-delay="0">
+          <h3>Backend Frameworks</h3>
+          <div class="tech-grid">
+            <div class="tech-chip"><i class="devicon-laravel-original colored chip-icon"></i> Laravel</div>
+            <div class="tech-chip"><i class="devicon-symfony-original colored chip-icon"></i> Symfony</div>
+            <div class="tech-chip"><img src="https://cdn.simpleicons.org/codeigniter" class="si-icon chip-icon"
+                alt="CodeIgniter"> CodeIgniter</div>
+            <div class="tech-chip"><i class="devicon-nodejs-plain colored chip-icon"></i> Node.js</div>
+            <div class="tech-chip"><i class="devicon-express-original chip-icon"></i> Express.js</div>
+            <div class="tech-chip"><i class="devicon-nestjs-original colored chip-icon"></i> NestJS</div>
+            <div class="tech-chip"><img src="https://cdn.simpleicons.org/fastify/888888" class="si-icon chip-icon"
+                alt="Fastify"> Fastify</div>
+          </div>
+        </div>
+
+        <div class="tech-category reveal" data-delay="150">
+          <h3>Databases &amp; Cache</h3>
+          <div class="tech-grid">
+            <div class="tech-chip"><i class="devicon-mongodb-plain colored chip-icon"></i> MongoDB</div>
+            <div class="tech-chip"><i class="devicon-postgresql-plain colored chip-icon"></i> PostgreSQL</div>
+            <div class="tech-chip"><i class="devicon-mysql-original colored chip-icon"></i> MySQL</div>
+            <div class="tech-chip"><i class="devicon-redis-plain colored chip-icon"></i> Redis</div>
+            <div class="tech-chip"><img src="https://cdn.simpleicons.org/qdrant" class="si-icon chip-icon" alt="Qdrant">
+              Qdrant (Vector DB)</div>
+          </div>
+        </div>
+
+        <div class="tech-category reveal" data-delay="300">
+          <h3>Architecture &amp; Infrastructure</h3>
+          <div class="tech-grid">
+            <div class="tech-chip"><img src="https://cdn.simpleicons.org/rabbitmq" class="si-icon chip-icon"
+                alt="RabbitMQ"> Message Queues (RabbitMQ)</div>
+            <div class="tech-chip"><i class="devicon-docker-plain colored chip-icon"></i> Docker</div>
+            <div class="tech-chip"><i class="devicon-amazonwebservices-plain-wordmark colored chip-icon"
+                style="font-size:1.5rem"></i> AWS / Cloud</div>
+            <div class="tech-chip"><i class="devicon-githubactions-plain colored chip-icon"></i> CI/CD Pipelines</div>
+            <div class="tech-chip"><i class="devicon-graphql-plain colored chip-icon"></i> GraphQL / REST</div>
+            <div class="tech-chip"><i class="devicon-nginx-original colored chip-icon"></i> Nginx</div>
+          </div>
+        </div>
+
+        <div class="tech-category reveal delay-3">
+          <h3>AI &amp; Automation</h3>
+          <div class="tech-grid">
+            <div class="tech-chip"><img src="https://api.iconify.design/simple-icons:openai.svg"
+                class="si-icon chip-icon" alt="OpenAI"> OpenAI / LLMs</div>
+            <div class="tech-chip"><img src="https://api.iconify.design/simple-icons:langchain.svg"
+                class="si-icon chip-icon" alt="LangChain"> LangChain</div>
+            <div class="tech-chip"><img src="https://cdn.simpleicons.org/n8n" class="si-icon chip-icon" alt="n8n"> n8n
+              Automation</div>
+            <div class="tech-chip"><img src="https://api.iconify.design/simple-icons:dialogflow.svg"
+                class="si-icon chip-icon" alt="Dialogflow"> Dialogflow</div>
+            <div class="tech-chip"><i class="devicon-python-plain colored chip-icon"></i> Python (AI Scripts)</div>
+            <div class="tech-chip"><img src="https://cdn.simpleicons.org/huggingface/FFD21E" class="si-icon chip-icon"
+                alt="HuggingFace"> HuggingFace / RAG</div>
+          </div>
+        </div>
+
+        <div class="tech-category reveal delay-4">
+          <h3>Integrations &amp; APIs</h3>
+          <div class="tech-grid">
+            <div class="tech-chip"><img src="https://api.iconify.design/simple-icons:stripe.svg"
+                class="si-icon chip-icon" alt="Stripe"> Stripe</div>
+            <div class="tech-chip"><img src="https://api.iconify.design/simple-icons:ebay.svg" class="si-icon chip-icon"
+                alt="eBay"> eBay Trading API</div>
+            <div class="tech-chip"><img src="https://api.iconify.design/simple-icons:mailchimp.svg"
+                class="si-icon chip-icon" alt="Mailchimp"> Mailchimp</div>
+            <div class="tech-chip"><img src="https://api.iconify.design/simple-icons:googleanalytics.svg"
+                class="si-icon chip-icon" alt="Google Analytics"> Google Analytics 4</div>
+            <div class="tech-chip"><img src="https://api.iconify.design/simple-icons:twilio.svg"
+                class="si-icon chip-icon" alt="Twilio"> Webhooks / Events</div>
+            <div class="tech-chip"><img src="https://api.iconify.design/simple-icons:auth0.svg"
+                class="si-icon chip-icon" alt="Auth0">
+              OAuth 2.0 / JWT</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PROJECTS ==================== -->
+  <section class="projects" id="projects">
+    <div class="container">
+      <div class="projects-header reveal">
+        <div class="section-label">Projects</div>
+        <h2 class="section-title">Work that ships to production</h2>
+        <p class="section-subtitle">
+          Each project represents a real-world challenge solved with deliberate architectural decisions.
+        </p>
+      </div>
+
+      <div class="slider-wrapper reveal">
+        <div class="projects-slider">
+          <!-- Project 1 -->
+          <div class="project-card">
+            <div class="project-info">
+              <span class="project-number">01 / 04</span>
+              <h3 class="project-title">Asset Management System</h3>
+              <p class="project-tags">MERN Stack • Marketplace • Role-based Access</p>
+              <p class="project-desc">
+                A full-featured asset management platform enabling organizations to catalog, track, and trade physical
+                and digital assets. Built with a marketplace layer that allows peer-to-peer asset transfers with
+                approval workflows, notifications, and audit trails.
+              </p>
+
+              <div class="impact-card">
+                <h4>KEY IMPACT</h4>
+                <ul>
+                  <li>Multi-tenant architecture supporting independent organizations on a single deployment</li>
+                  <li>Marketplace with real-time bid/ask system and transaction history</li>
+                  <li>Role-based access control covering 5 distinct permission levels</li>
+                  <li>Bulk import/export with CSV validation and async processing</li>
+                </ul>
+              </div>
+
+              <div class="project-links">
+                <span class="tech-chip">MongoDB</span>
+                <span class="tech-chip">Express.js</span>
+                <span class="tech-chip">React</span>
+                <span class="tech-chip">Node.js</span>
+                <span class="tech-chip">JWT Auth</span>
+                <span class="tech-chip">Socket.io</span>
+              </div>
+            </div>
+
+            <div class="project-visual">
+              <div class="blueprint-container">
+                <div class="blueprint-label">ARCHITECTURAL BLUEPRINT</div>
+                <div class="blueprint-graphic">
+                  <div class="node" style="top: 70%; left: 15%;">Client App</div>
+                  <div class="node" style="top: 60%; left: 45%; border-style: dashed;">API Gateway</div>
+                  <div class="node" style="top: 50%; left: 75%; border-color: var(--accent-secondary);">MongoDB</div>
+                  <div class="node" style="top: 70%; left: 75%; border-color: var(--accent-tertiary);">Redis</div>
+                  <div class="node" style="top: 65%; left: 60%;">Asset Service</div>
+                  <div class="line" style="top: 65%; left: 25%; width: 20%; transform: rotate(-10deg);"></div>
+                  <div class="line" style="top: 65%; left: 55%; width: 20%; transform: rotate(10deg);"></div>
+                  <div class="annotation" style="top: 50%; left: 15%;">Event-driven communication</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card">
+            <div class="project-info">
+              <span class="project-number">02 / 04</span>
+              <h3 class="project-title">Real-time Trading Ledger</h3>
+              <p class="project-tags">Go • gRPC • PostgreSQL • Redis</p>
+              <p class="project-desc">
+                A high-performance distributed ledger system designed for low-latency financial transactions. Implements
+                the Raft consensus algorithm for consistency and uses gRPC for inter-service communication, achieving
+                sub-5ms latency for internal routing.
+              </p>
+
+              <div class="impact-card">
+                <h4>KEY IMPACT</h4>
+                <ul>
+                  <li>Processed 10k+ transactions per second in stress testing</li>
+                  <li>Zero data loss architecture with write-ahead logging and snapshots</li>
+                  <li>Reduced database load by 60% through aggressive multi-layer caching</li>
+                  <li>Automated failover with health-check monitoring via Prometheus</li>
+                </ul>
+              </div>
+
+              <div class="project-links">
+                <span class="tech-chip">GoLang</span>
+                <span class="tech-chip">gRPC</span>
+                <span class="tech-chip">PostgreSQL</span>
+                <span class="tech-chip">Redis</span>
+                <span class="tech-chip">Docker</span>
+                <span class="tech-chip">Kubernetes</span>
+              </div>
+            </div>
+
+            <div class="project-visual">
+              <div class="blueprint-container">
+                <div class="blueprint-label">ARCHITECTURAL BLUEPRINT</div>
+                <div class="blueprint-graphic">
+                  <div class="node" style="top: 60%; left: 10%;">LB</div>
+                  <div class="node" style="top: 60%; left: 30%;">Node A</div>
+                  <div class="node" style="top: 40%; left: 30%;">Node B</div>
+                  <div class="node" style="top: 80%; left: 30%;">Node C</div>
+                  <div class="node" style="top: 60%; left: 60%; border-style: dotted;">Raft Consensus</div>
+                  <div class="node" style="top: 60%; left: 85%; border-color: var(--accent-secondary);">State DB</div>
+                  <div class="line" style="top: 65%; left: 15%; width: 15%;"></div>
+                  <div class="line" style="top: 65%; left: 40%; width: 20%;"></div>
+                  <div class="line" style="top: 65%; left: 70%; width: 15%;"></div>
+                  <div class="annotation" style="top: 30%; left: 40%;">Distributed Consensus Log</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card">
+            <div class="project-info">
+              <span class="project-number">03 / 04</span>
+              <h3 class="project-title">AI Knowledge Graph</h3>
+              <p class="project-tags">Python • Neo4j • LangChain • FastAPI</p>
+              <p class="project-desc">
+                An automated knowledge extraction engine that transforms unstructured documentation into a queryable
+                graph database. Uses LLMs for entity relationship extraction and vector embeddings for semantic search
+                across the graph.
+              </p>
+
+              <div class="impact-card">
+                <h4>KEY IMPACT</h4>
+                <ul>
+                  <li>Mapped 50,000+ relationships from 1,000+ technical docs</li>
+                  <li>35% improvement in RAG response accuracy over flat vector search</li>
+                  <li>Real-time graph visualization for interactive data exploration</li>
+                  <li>Scalable pipeline processing via RabbitMQ task queues</li>
+                </ul>
+              </div>
+
+              <div class="project-links">
+                <span class="tech-chip">Python</span>
+                <span class="tech-chip">Neo4j</span>
+                <span class="tech-chip">LangChain</span>
+                <span class="tech-chip">OpenAI</span>
+                <span class="tech-chip">FastAPI</span>
+                <span class="tech-chip">RabbitMQ</span>
+              </div>
+            </div>
+
+            <div class="project-visual">
+              <div class="blueprint-container">
+                <div class="blueprint-label">ARCHITECTURAL BLUEPRINT</div>
+                <div class="blueprint-graphic">
+                  <div class="node" style="top: 50%; left: 10%;">PDF/Doc</div>
+                  <div class="node" style="top: 50%; left: 35%; border-style: dashed;">Extractor</div>
+                  <div class="node" style="top: 30%; left: 60%; border-color: var(--accent-tertiary);">LLM Proxy</div>
+                  <div class="node" style="top: 70%; left: 60%; border-color: var(--accent-secondary);">Neo4j</div>
+                  <div class="node" style="top: 50%; left: 85%;">Query API</div>
+                  <div class="line" style="top: 55%; left: 20%; width: 15%;"></div>
+                  <div class="line" style="top: 55%; left: 45%; width: 15%; transform: rotate(-30deg);"></div>
+                  <div class="line" style="top: 55%; left: 45%; width: 15%; transform: rotate(30deg);"></div>
+                  <div class="line" style="top: 40%; left: 70%; width: 15%; transform: rotate(45deg);"></div>
+                  <div class="annotation" style="top: 75%; left: 20%;">Asynchronous Extraction Pipeline</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Project 4 -->
+          <div class="project-card">
+            <div class="project-info">
+              <span class="project-number">04 / 04</span>
+              <h3 class="project-title">PostPilot AI Automator</h3>
+              <p class="project-tags">Node.js • Qdrant • Redis • AI Agents</p>
+              <p class="project-desc">
+                An autonomous social media orchestration engine that scrapes high-performing content, processes it via
+                LLMs,
+                and schedules multi-platform distribution. Features a RAG-based intelligence layer using Qdrant for
+                style-consistent generation.
+              </p>
+
+              <div class="impact-card">
+                <h4>KEY IMPACT</h4>
+                <ul>
+                  <li>Fully autonomous pipeline from ingestion to multi-platform publishing</li>
+                  <li>Vector-driven style mimicry achieving 90% brand voice alignment</li>
+                  <li>Distributed task processing using BullMQ and Redis</li>
+                  <li>Zero-intervention social media management for 5+ accounts</li>
+                </ul>
+              </div>
+
+              <div class="project-links">
+                <span class="tech-chip">Node.js</span>
+                <span class="tech-chip">Qdrant</span>
+                <span class="tech-chip">Redis</span>
+                <span class="tech-chip">OpenAI</span>
+                <span class="tech-chip">Puppeteer</span>
+              </div>
+            </div>
+
+            <div class="project-visual">
+              <div class="blueprint-container">
+                <div class="blueprint-label">ARCHITECTURAL BLUEPRINT</div>
+                <div class="blueprint-graphic">
+                  <div class="node" style="top: 40%; left: 10%;">Scraper</div>
+                  <div class="node" style="top: 20%; left: 40%; border-color: var(--accent-tertiary);">Qdrant DB</div>
+                  <div class="node" style="top: 60%; left: 40%; border-style: dashed;">Agent Core</div>
+                  <div class="node" style="top: 40%; left: 70%; border-color: var(--accent-secondary);">Scheduler</div>
+                  <div class="node" style="top: 40%; left: 90%;">Social APIS</div>
+                  <div class="line" style="top: 35%; left: 20%; width: 15%; transform: rotate(-25deg);"></div>
+                  <div class="line" style="top: 55%; left: 20%; width: 15%; transform: rotate(25deg);"></div>
+                  <div class="line" style="top: 40%; left: 55%; width: 12%;"></div>
+                  <div class="annotation" style="top: 75%; left: 35%;">RAG-Enhanced Content Loops</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slider-controls">
+          <button class="slider-arrow" id="projPrev" aria-label="Previous project">←</button>
+          <div class="slider-nav" data-slider="projects">
+            <button class="nav-dot active" data-index="0"></button>
+            <button class="nav-dot" data-index="1"></button>
+            <button class="nav-dot" data-index="2"></button>
+            <button class="nav-dot" data-index="3"></button>
+          </div>
+          <span class="slide-counter" id="projCounter">01 / 04</span>
+          <button class="slider-arrow" id="projNext" aria-label="Next project">→</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ==================== LABS / SHOWCASE ==================== -->
+  <section class="labs" id="labs">
+    <div class="container">
+      <div class="labs-header reveal">
+        <div class="section-label">Engineering Labs</div>
+        <h2 class="section-title">Interactive POCs &amp; Automations</h2>
+        <p class="section-subtitle">
+          A deep dive into AI-driven workflows and experimental backend builds — from zero to production.
+        </p>
+      </div>
+
+      <div class="poc-grid reveal">
+
+        <!-- POC 1 -->
+        <div class="poc-card">
+          <div class="poc-card-header" style="--poc-color: #6366f1; --poc-glow: rgba(99,102,241,0.15);">
+            <div class="poc-icon">🔗</div>
+            <span class="poc-badge">LangChain</span>
+          </div>
+          <div class="poc-card-body">
+            <h3 class="poc-title">LangChain RAG Pipeline</h3>
+            <p class="poc-desc">Intelligent document Q&amp;A system using LangChain, OpenAI, and Qdrant vector store
+              with semantic chunking.</p>
+            <div class="poc-metrics">
+              <div class="poc-metric"><span class="poc-metric-val">50K+</span><span class="poc-metric-lab">Docs
+                  indexed</span></div>
+              <div class="poc-metric"><span class="poc-metric-val">92%</span><span class="poc-metric-lab">Answer
+                  accuracy</span></div>
+            </div>
+            <div class="poc-tags">
+              <span class="poc-tag">Python</span>
+              <span class="poc-tag">OpenAI</span>
+              <span class="poc-tag">Qdrant</span>
+              <span class="poc-tag">LangChain</span>
+            </div>
+          </div>
+          <div class="poc-card-footer">
+            <a href="poc.html#rag-pipeline" class="poc-link poc-link-primary">Explore POC →</a>
+            <a href="#" class="poc-link poc-link-ghost">Source 🐙</a>
+          </div>
+        </div>
+
+        <!-- POC 2 -->
+        <div class="poc-card">
+          <div class="poc-card-header" style="--poc-color: #06b6d4; --poc-glow: rgba(6,182,212,0.15);">
+            <div class="poc-icon">⚡</div>
+            <span class="poc-badge">n8n</span>
+          </div>
+          <div class="poc-card-body">
+            <h3 class="poc-title">Autonomous Outreach Flow</h3>
+            <p class="poc-desc">Scalable n8n workflow for automated lead generation, CRM sync, and personalized email
+              outreach at scale.</p>
+            <div class="poc-metrics">
+              <div class="poc-metric"><span class="poc-metric-val">3x</span><span class="poc-metric-lab">Lead
+                  throughput</span></div>
+              <div class="poc-metric"><span class="poc-metric-val">0</span><span class="poc-metric-lab">Manual
+                  steps</span></div>
+            </div>
+            <div class="poc-tags">
+              <span class="poc-tag">n8n</span>
+              <span class="poc-tag">Stripe</span>
+              <span class="poc-tag">Webhooks</span>
+              <span class="poc-tag">REST</span>
+            </div>
+          </div>
+          <div class="poc-card-footer">
+            <a href="poc.html#outreach-flow" class="poc-link poc-link-primary">View Workflow →</a>
+            <a href="#" class="poc-link poc-link-ghost">Config 📜</a>
+          </div>
+        </div>
+
+        <!-- POC 3 -->
+        <div class="poc-card">
+          <div class="poc-card-header" style="--poc-color: #a855f7; --poc-glow: rgba(168,85,247,0.15);">
+            <div class="poc-icon">🤖</div>
+            <span class="poc-badge">AI Agents</span>
+          </div>
+          <div class="poc-card-body">
+            <h3 class="poc-title">Multi-Agent Researcher</h3>
+            <p class="poc-desc">A crew of autonomous agents coordinating via CrewAI to research, summarize, and
+              synthesize complex topics.</p>
+            <div class="poc-metrics">
+              <div class="poc-metric"><span class="poc-metric-val">5</span><span class="poc-metric-lab">Agent
+                  roles</span></div>
+              <div class="poc-metric"><span class="poc-metric-val">GPT-4o</span><span class="poc-metric-lab">Backbone
+                  LLM</span></div>
+            </div>
+            <div class="poc-tags">
+              <span class="poc-tag">CrewAI</span>
+              <span class="poc-tag">GPT-4o</span>
+              <span class="poc-tag">LlamaIndex</span>
+            </div>
+          </div>
+          <div class="poc-card-footer">
+            <a href="poc.html#multi-agent" class="poc-link poc-link-primary">Agent Log →</a>
+            <a href="#" class="poc-link poc-link-ghost">GitHub 🐙</a>
+          </div>
+        </div>
+
+        <!-- POC 4 -->
+        <div class="poc-card">
+          <div class="poc-card-header" style="--poc-color: #f59e0b; --poc-glow: rgba(245,158,11,0.15);">
+            <div class="poc-icon">🛠️</div>
+            <span class="poc-badge">Custom MCP</span>
+          </div>
+          <div class="poc-card-body">
+            <h3 class="poc-title">Redis MCP Server</h3>
+            <p class="poc-desc">A custom Model Context Protocol server enabling AI models to directly interact with
+              Redis clusters via tool calls.</p>
+            <div class="poc-metrics">
+              <div class="poc-metric"><span class="poc-metric-val">12</span><span class="poc-metric-lab">Tool
+                  actions</span></div>
+              <div class="poc-metric"><span class="poc-metric-val">&lt;2ms</span><span class="poc-metric-lab">Avg
+                  latency</span></div>
+            </div>
+            <div class="poc-tags">
+              <span class="poc-tag">TypeScript</span>
+              <span class="poc-tag">Node.js</span>
+              <span class="poc-tag">Redis</span>
+            </div>
+          </div>
+          <div class="poc-card-footer">
+            <a href="poc.html#redis-mcp" class="poc-link poc-link-primary">Docs →</a>
+            <a href="#" class="poc-link poc-link-ghost">NPM 📦</a>
+          </div>
+        </div>
+
+        <!-- POC 5 -->
+        <div class="poc-card">
+          <div class="poc-card-header" style="--poc-color: #10b981; --poc-glow: rgba(16,185,129,0.15);">
+            <div class="poc-icon">☁️</div>
+            <span class="poc-badge">Infrastructure</span>
+          </div>
+          <div class="poc-card-body">
+            <h3 class="poc-title">Dynamic CloudFront Injector</h3>
+            <p class="poc-desc">Non-destructive on-the-fly S3→CloudFront URL swapping using Eloquent model traits and
+              Laravel accessors.</p>
+            <div class="poc-metrics">
+              <div class="poc-metric"><span class="poc-metric-val">0</span><span class="poc-metric-lab">DB
+                  migrations</span></div>
+              <div class="poc-metric"><span class="poc-metric-val">CDN</span><span class="poc-metric-lab">Instant
+                  rollout</span></div>
+            </div>
+            <div class="poc-tags">
+              <span class="poc-tag">PHP</span>
+              <span class="poc-tag">Laravel</span>
+              <span class="poc-tag">AWS S3</span>
+              <span class="poc-tag">CloudFront</span>
+            </div>
+          </div>
+          <div class="poc-card-footer">
+            <a href="poc.html#cloudfront" class="poc-link poc-link-primary">Review Trait →</a>
+            <a href="#" class="poc-link poc-link-ghost">Docs 📄</a>
+          </div>
+        </div>
+
+        <!-- POC 6 — PostPilot -->
+        <div class="poc-card">
+          <div class="poc-card-header" style="--poc-color: #ec4899; --poc-glow: rgba(236,72,153,0.15);">
+            <div class="poc-icon">📡</div>
+            <span class="poc-badge">AI Automation</span>
+          </div>
+          <div class="poc-card-body">
+            <h3 class="poc-title">PostPilot AI Automator</h3>
+            <p class="poc-desc">Autonomous social media orchestration — scrapes, LLM-generates, and schedules posts
+              across 5+ platforms with RAG style mimicry.</p>
+            <div class="poc-metrics">
+              <div class="poc-metric"><span class="poc-metric-val">90%</span><span class="poc-metric-lab">Brand
+                  alignment</span></div>
+              <div class="poc-metric"><span class="poc-metric-val">5+</span><span
+                  class="poc-metric-lab">Platforms</span></div>
+            </div>
+            <div class="poc-tags">
+              <span class="poc-tag">Node.js</span>
+              <span class="poc-tag">Qdrant</span>
+              <span class="poc-tag">BullMQ</span>
+              <span class="poc-tag">OpenAI</span>
+            </div>
+          </div>
+          <div class="poc-card-footer">
+            <a href="poc.html#postpilot" class="poc-link poc-link-primary">Explore →</a>
+            <a href="#" class="poc-link poc-link-ghost">GitHub 🐙</a>
+          </div>
+        </div>
+
+      </div><!-- end .poc-grid -->
+
+      <!-- View All POC CTA -->
+      <div class="labs-cta reveal">
+        <a href="poc.html" class="btn-poc-all">
+          <span>View All POCs &amp; Labs</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </a>
+        <p class="labs-cta-sub">8 experimental builds · AI, infrastructure, integrations</p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==================== EXPERIENCE ==================== -->
+  <section class="experience" id="experience">
+    <div class="container">
+      <div class="exp-header reveal">
+        <div class="section-label">Experience</div>
+        <h2 class="section-title">Where I've worked</h2>
+        <p class="section-subtitle">
+          Roles where delivery, ownership, and quality were non-negotiable.
+        </p>
+      </div>
+
+      <div class="exp-grid">
+
+        <div class="exp-card reveal">
+          <div class="exp-period">2022 — Present</div>
+          <div class="exp-role">Senior Backend Engineer</div>
+          <div class="exp-company">Remote / Freelance & Product Teams</div>
+          <p class="exp-desc">
+            Designing and delivering backend systems for SaaS products and agencies. Leading architecture decisions on
+            microservices projects, integrating complex third-party APIs, and shipping AI-augmented features using RAG
+            pipelines and LLM orchestration.
+          </p>
+          <div class="exp-tags">
+            <span class="exp-tag">NestJS</span>
+            <span class="exp-tag">PostgreSQL</span>
+            <span class="exp-tag">Microservices</span>
+            <span class="exp-tag">AI/RAG</span>
+            <span class="exp-tag">Stripe</span>
+          </div>
+        </div>
+
+        <div class="exp-card reveal delay-1">
+          <div class="exp-period">2020 — 2022</div>
+          <div class="exp-role">Backend Engineer</div>
+          <div class="exp-company">E-commerce Platform Team</div>
+          <p class="exp-desc">
+            Built and maintained backend services for a multi-vendor e-commerce platform. Owned the eBay marketplace
+            integration, inventory sync engine, and payment orchestration layer using Stripe. Improved API response
+            times by 40% through query optimization and strategic caching.
+          </p>
+          <div class="exp-tags">
+            <span class="exp-tag">Laravel</span>
+            <span class="exp-tag">MySQL</span>
+            <span class="exp-tag">eBay API</span>
+            <span class="exp-tag">Redis</span>
+          </div>
+        </div>
+
+        <div class="exp-card reveal delay-2">
+          <div class="exp-period">2018 — 2020</div>
+          <div class="exp-role">Full-Stack Developer</div>
+          <div class="exp-company">Digital Agency</div>
+          <p class="exp-desc">
+            Delivered end-to-end web applications for clients across real estate, retail, and service sectors.
+            Introduced standardized API patterns, shifted team from monolithic to service-oriented design, and mentored
+            junior developers on testing and code quality.
+          </p>
+          <div class="exp-tags">
+            <span class="exp-tag">Node.js</span>
+            <span class="exp-tag">Laravel</span>
+            <span class="exp-tag">MongoDB</span>
+            <span class="exp-tag">React</span>
+          </div>
+        </div>
+
+        <div class="exp-card reveal delay-3">
+          <div class="exp-period">2017 — 2018</div>
+          <div class="exp-role">Junior PHP Developer</div>
+          <div class="exp-company">Software Consultancy</div>
+          <p class="exp-desc">
+            Started career building custom web applications and CMS integrations. Quickly moved from CRUD to ownership
+            of client API integrations, payment flows, and database design. Adopted Laravel and became the team's go-to
+            on Eloquent optimization.
+          </p>
+          <div class="exp-tags">
+            <span class="exp-tag">PHP</span>
+            <span class="exp-tag">CodeIgniter</span>
+            <span class="exp-tag">MySQL</span>
+            <span class="exp-tag">REST APIs</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CONTACT ==================== -->
+  <section class="contact" id="contact">
+    <div class="contact-bg-orb"></div>
+    <div class="container">
+      <div class="contact-inner">
+        <div class="contact-content reveal-left">
+          <div class="section-label">Contact</div>
+          <h2 class="section-title">Let's build something that matters.</h2>
+          <p style="color:var(--text-secondary);line-height:1.7;font-size:1rem;margin-top:16px;">
+            I'm open to senior backend roles, contract projects, and technical consulting. If you have a problem worth
+            solving — let's talk.
+          </p>
+
+          <a href="mailto:asif@krishaweb.com" class="contact-email-link">
+            ✉️ asif@krishaweb.com
+          </a>
+
+          <div class="contact-socials">
+            <a href="#" class="social-link">
+              <div class="social-icon">🔗</div>
+              <div>
+                <div style="font-size:0.88rem;font-weight:600;">LinkedIn</div>
+                <div style="font-size:0.75rem;color:var(--text-muted);">linkedin.com/in/genius-asif</div>
+              </div>
+              <span class="social-arrow">→</span>
+            </a>
+            <a href="#" class="social-link">
+              <div class="social-icon">🐙</div>
+              <div>
+                <div style="font-size:0.88rem;font-weight:600;">GitHub</div>
+                <div style="font-size:0.75rem;color:var(--text-muted);">github.com/genius-asif-hub</div>
+              </div>
+              <span class="social-arrow">→</span>
+            </a>
+            <a href="#" class="social-link">
+              <div class="social-icon">🐦</div>
+              <div>
+                <div style="font-size:0.88rem;font-weight:600;">Twitter / X</div>
+                <div style="font-size:0.75rem;color:var(--text-muted);">@genius-asif</div>
+              </div>
+              <span class="social-arrow">→</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-form reveal-right">
+          <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:24px;color:var(--text-primary);">Send a message</h3>
+          <form id="contactForm" onsubmit="handleFormSubmit(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" placeholder="John" required />
+              </div>
+              <div class="form-group">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" placeholder="Smith" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" placeholder="john@company.com" required />
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" placeholder="Project inquiry / Role opportunity" />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" placeholder="Tell me about your project or what you're looking for..."
+                required></textarea>
+            </div>
+            <button type="submit" class="form-submit" id="submitBtn">
+              <span id="submitText">Send Message</span>
+              <span id="submitIcon">→</span>
+            </button>
+            <p id="formSuccess" style="display:none;color:#22c55e;font-size:0.85rem;margin-top:12px;text-align:center;">
+              ✅ Message sent! I'll get back to you within 24 hours.
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-logo">asif<span>.</span>dev</div>
+      <div class="footer-copy">© 2026 Asif Shaikh. Built with care, shipped with precision.</div>
+      <div class="footer-links">
+        <a href="#hero">Top ↑</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Live System Feed -->
+  <div class="live-feed" id="liveFeed"></div>
+
+  <script src="script.js"></script>
+  <!-- Floating Terminal Dashboard -->
+  <div class="terminal-dashboard" id="terminalDashboard">
+    <div class="terminal-header">
+      <div class="terminal-dots">
+        <div class="terminal-dot red"></div>
+        <div class="terminal-dot yellow"></div>
+        <div class="terminal-dot green"></div>
+      </div>
+      <div class="terminal-title">System Runtime Feed</div>
+      <div style="width: 32px;"></div><!-- Spacer -->
+    </div>
+    <div class="terminal-body" id="terminalBody">
+      <!-- Logs will be injected here -->
+      <div class="log-entry"><span>[12:54:27]</span> SYSTEM: Kernel initialized. Ready for interaction.</div>
+    </div>
+  </div>
+
+  <script src="live-feed.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Labs — POC Showcase</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&family=Inter:wght@400;500;600;700;800&family=Outfit:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            background: #030712;
+            overflow-x: hidden;
+        }
+
+        .poc-hero {
+            padding: 120px 0 80px;
+            background: radial-gradient(circle at 50% -20%, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--text-secondary);
+            font-weight: 700;
+            margin-bottom: 48px;
+            transition: var(--transition);
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+
+        .back-btn:hover {
+            color: var(--accent);
+            transform: translateX(-6px);
+        }
+
+        .poc-hero-title {
+            font-size: clamp(2.5rem, 8vw, 4rem);
+            font-weight: 800;
+            color: var(--text-primary);
+            margin-bottom: 24px;
+            letter-spacing: -0.04em;
+            line-height: 1;
+        }
+
+        .text-gradient {
+            background: var(--gradient-hero);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .poc-hero-desc {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        .poc-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .poc-sections {
+            padding: 80px 0 120px;
+        }
+
+        .section-intro {
+            margin-bottom: 64px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 24px;
+        }
+
+        .section-info h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+
+        .section-info p {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        .poc-count {
+            font-family: 'Fira Code', monospace;
+            font-size: 0.9rem;
+            color: var(--accent);
+            background: rgba(99, 102, 241, 0.1);
+            padding: 6px 16px;
+            border-radius: 100px;
+            font-weight: 700;
+        }
+
+        /* Ensure cards in this page are solid and uniform */
+        .poc-card {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer-simple {
+            padding: 64px 0;
+            border-top: 1px solid var(--border);
+            text-align: center;
+        }
+
+        .footer-simple p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Animation Classes */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.2, 0, 0, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Hero Section -->
+    <header class="poc-hero">
+        <div class="poc-container">
+            <a href="index.html#labs" class="back-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+                <span>Back to Portfolio</span>
+            </a>
+            <h1 class="poc-hero-title">Engineering <span class="text-gradient">Labs</span></h1>
+            <p class="poc-hero-desc">
+                A repository of technical experiments, architectural proof-of-concepts, and AI-driven automation
+                workflows.
+            </p>
+        </div>
+    </header>
+
+    <!-- POC Grid Section -->
+    <main class="poc-sections">
+        <div class="poc-container">
+
+            <div class="section-intro reveal">
+                <div class="section-info">
+                    <h2>Active Experiments</h2>
+                    <p>Production-ready logic, experimental interfaces.</p>
+                </div>
+                <div class="poc-count">8 Total POCs</div>
+            </div>
+
+            <div class="poc-grid">
+                <!-- POC 1 -->
+                <div id="rag-pipeline" class="poc-card reveal"
+                    style="--poc-color: #6366f1; --poc-glow: rgba(99,102,241,0.15);">
+                    <div class="poc-card-header">
+                        <div class="poc-icon">🔗</div>
+                        <span class="poc-badge">LangChain</span>
+                    </div>
+                    <div class="poc-card-body">
+                        <h3 class="poc-title">LangChain RAG Pipeline</h3>
+                        <p class="poc-desc">Intelligent document Q&A system using LangChain, OpenAI, and Qdrant vector
+                            store with semantic chunking and hybrid search.</p>
+                        <div class="poc-metrics">
+                            <div class="poc-metric"><span class="poc-metric-val">50K+</span><span
+                                    class="poc-metric-lab">Docs Indexed</span></div>
+                            <div class="poc-metric"><span class="poc-metric-val">92%</span><span
+                                    class="poc-metric-lab">Accuracy</span></div>
+                        </div>
+                        <div class="poc-tags">
+                            <span class="poc-tag">Python</span>
+                            <span class="poc-tag">OpenAI</span>
+                            <span class="poc-tag">Qdrant</span>
+                            <span class="poc-tag">RAG</span>
+                        </div>
+                    </div>
+                    <div class="poc-card-footer">
+                        <a href="#" class="poc-link poc-link-primary">Live Demo →</a>
+                        <a href="#" class="poc-link poc-link-ghost">GitHub 🐙</a>
+                    </div>
+                </div>
+
+                <!-- POC 2 -->
+                <div id="outreach-flow" class="poc-card reveal"
+                    style="--poc-color: #06b6d4; --poc-glow: rgba(6,182,212,0.15);">
+                    <div class="poc-card-header">
+                        <div class="poc-icon">⚡</div>
+                        <span class="poc-badge">n8n</span>
+                    </div>
+                    <div class="poc-card-body">
+                        <h3 class="poc-title">Autonomous Outreach Flow</h3>
+                        <p class="poc-desc">Scalable n8n workflow for automated lead generation, CRM sync, and
+                            personalized email outreach using LinkedIn scraping.</p>
+                        <div class="poc-metrics">
+                            <div class="poc-metric"><span class="poc-metric-val">3x</span><span
+                                    class="poc-metric-lab">Lead Speed</span></div>
+                            <div class="poc-metric"><span class="poc-metric-val">100%</span><span
+                                    class="poc-metric-lab">Auto</span></div>
+                        </div>
+                        <div class="poc-tags">
+                            <span class="poc-tag">n8n</span>
+                            <span class="poc-tag">Stripe</span>
+                            <span class="poc-tag">Webhooks</span>
+                        </div>
+                    </div>
+                    <div class="poc-card-footer">
+                        <a href="#" class="poc-link poc-link-primary">Workflow JSON →</a>
+                        <a href="#" class="poc-link poc-link-ghost">Config 📜</a>
+                    </div>
+                </div>
+
+                <!-- POC 3 -->
+                <div id="multi-agent" class="poc-card reveal"
+                    style="--poc-color: #a855f7; --poc-glow: rgba(168,85,247,0.15);">
+                    <div class="poc-card-header">
+                        <div class="poc-icon">🤖</div>
+                        <span class="poc-badge">AI Agents</span>
+                    </div>
+                    <div class="poc-card-body">
+                        <h3 class="poc-title">Multi-Agent Researcher</h3>
+                        <p class="poc-desc">A crew of autonomous agents coordinating via CrewAI to research and
+                            synthesize complex technical topics into reports.</p>
+                        <div class="poc-metrics">
+                            <div class="poc-metric"><span class="poc-metric-val">5</span><span
+                                    class="poc-metric-lab">Active Agents</span></div>
+                            <div class="poc-metric"><span class="poc-metric-val">GPT-4o</span><span
+                                    class="poc-metric-lab">Model</span></div>
+                        </div>
+                        <div class="poc-tags">
+                            <span class="poc-tag">CrewAI</span>
+                            <span class="poc-tag">LlamaIndex</span>
+                            <span class="poc-tag">Agents</span>
+                        </div>
+                    </div>
+                    <div class="poc-card-footer">
+                        <a href="#" class="poc-link poc-link-primary">Agent Log →</a>
+                        <a href="#" class="poc-link poc-link-ghost">GitHub 🐙</a>
+                    </div>
+                </div>
+
+                <!-- POC 4 -->
+                <div id="redis-mcp" class="poc-card reveal"
+                    style="--poc-color: #f59e0b; --poc-glow: rgba(245,158,11,0.15);">
+                    <div class="poc-card-header">
+                        <div class="poc-icon">🛠️</div>
+                        <span class="poc-badge">Custom MCP</span>
+                    </div>
+                    <div class="poc-card-body">
+                        <h3 class="poc-title">Redis MCP Server</h3>
+                        <p class="poc-desc">A custom Model Context Protocol server enabling AI models to directly
+                            interact with Redis clusters for real-time context.</p>
+                        <div class="poc-metrics">
+                            <div class="poc-metric"><span class="poc-metric-val">12</span><span
+                                    class="poc-metric-lab">Tools</span></div>
+                            <div class="poc-metric"><span class="poc-metric-val">&lt;2ms</span><span
+                                    class="poc-metric-lab">Latency</span></div>
+                        </div>
+                        <div class="poc-tags">
+                            <span class="poc-tag">TypeScript</span>
+                            <span class="poc-tag">Redis</span>
+                            <span class="poc-tag">MCP</span>
+                        </div>
+                    </div>
+                    <div class="poc-card-footer">
+                        <a href="#" class="poc-link poc-link-primary">Docs →</a>
+                        <a href="#" class="poc-link poc-link-ghost">NPM 📦</a>
+                    </div>
+                </div>
+
+                <!-- POC 5 -->
+                <div id="cloudfront" class="poc-card reveal"
+                    style="--poc-color: #10b981; --poc-glow: rgba(16,185,129,0.15);">
+                    <div class="poc-card-header">
+                        <div class="poc-icon">☁️</div>
+                        <span class="poc-badge">Infrastructure</span>
+                    </div>
+                    <div class="poc-card-body">
+                        <h3 class="poc-title">Dynamic CloudFront Injector</h3>
+                        <p class="poc-desc">Non-destructive on-the-fly S3→CloudFront URL swapping using Eloquent model
+                            traits and Laravel accessors.</p>
+                        <div class="poc-metrics">
+                            <div class="poc-metric"><span class="poc-metric-val">0</span><span
+                                    class="poc-metric-lab">Migrations</span></div>
+                            <div class="poc-metric"><span class="poc-metric-val">CDN</span><span
+                                    class="poc-metric-lab">Dynamic</span></div>
+                        </div>
+                        <div class="poc-tags">
+                            <span class="poc-tag">PHP</span>
+                            <span class="poc-tag">AWS</span>
+                            <span class="poc-tag">Laravel</span>
+                        </div>
+                    </div>
+                    <div class="poc-card-footer">
+                        <a href="#" class="poc-link poc-link-primary">Review Trait →</a>
+                        <a href="#" class="poc-link poc-link-ghost">Docs 📄</a>
+                    </div>
+                </div>
+
+                <!-- POC 6 -->
+                <div id="postpilot" class="poc-card reveal"
+                    style="--poc-color: #ec4899; --poc-glow: rgba(236,72,153,0.15);">
+                    <div class="poc-card-header">
+                        <div class="poc-icon">📡</div>
+                        <span class="poc-badge">AI Automation</span>
+                    </div>
+                    <div class="poc-card-body">
+                        <h3 class="poc-title">PostPilot AI Automator</h3>
+                        <p class="poc-desc">Autonomous social media orchestration — scrapes, LLM-generates, and
+                            schedules posts across 5+ platforms.</p>
+                        <div class="poc-metrics">
+                            <div class="poc-metric"><span class="poc-metric-val">90%</span><span
+                                    class="poc-metric-lab">Alignment</span></div>
+                            <div class="poc-metric"><span class="poc-metric-val">5+</span><span
+                                    class="poc-metric-lab">Platforms</span></div>
+                        </div>
+                        <div class="poc-tags">
+                            <span class="poc-tag">Node.js</span>
+                            <span class="poc-tag">BullMQ</span>
+                            <span class="poc-tag">OpenAI</span>
+                        </div>
+                    </div>
+                    <div class="poc-card-footer">
+                        <a href="#" class="poc-link poc-link-primary">Explore →</a>
+                        <a href="#" class="poc-link poc-link-ghost">GitHub 🐙</a>
+                    </div>
+                </div>
+
+                <!-- POC 7 -->
+                <div id="terminal-dash" class="poc-card reveal"
+                    style="--poc-color: #f43f5e; --poc-glow: rgba(244,63,94,0.15);">
+                    <div class="poc-card-header">
+                        <div class="poc-icon">🖥️</div>
+                        <span class="poc-badge">Dashboard</span>
+                    </div>
+                    <div class="poc-card-body">
+                        <h3 class="poc-title">CLI Terminal Dashboard</h3>
+                        <p class="poc-desc">Real-time internal system monitoring via a simulated terminal dashboard with
+                            command input and live log feeds.</p>
+                        <div class="poc-metrics">
+                            <div class="poc-metric"><span class="poc-metric-val">Real-time</span><span
+                                    class="poc-metric-lab">Latency</span></div>
+                            <div class="poc-metric"><span class="poc-metric-val">0.5s</span><span
+                                    class="poc-metric-lab">Refresh</span></div>
+                        </div>
+                        <div class="poc-tags">
+                            <span class="poc-tag">React</span>
+                            <span class="poc-tag">Xterm.js</span>
+                            <span class="poc-tag">WebSocket</span>
+                        </div>
+                    </div>
+                    <div class="poc-card-footer">
+                        <a href="#" class="poc-link poc-link-primary">Open Console →</a>
+                        <a href="#" class="poc-link poc-link-ghost">System 🛠️</a>
+                    </div>
+                </div>
+
+                <!-- POC 8 -->
+                <div id="stripe-mcp" class="poc-card reveal"
+                    style="--poc-color: #3b82f6; --poc-glow: rgba(59,130,246,0.15);">
+                    <div class="poc-card-header">
+                        <div class="poc-icon">💳</div>
+                        <span class="poc-badge">FinTech</span>
+                    </div>
+                    <div class="poc-card-body">
+                        <h3 class="poc-title">Stripe AI Auditor</h3>
+                        <p class="poc-desc">An AI agent that audits Stripe transactions, flags anomalies, and predicts
+                            churn using historical data.</p>
+                        <div class="poc-metrics">
+                            <div class="poc-metric"><span class="poc-metric-val">AI</span><span
+                                    class="poc-metric-lab">Automated</span></div>
+                            <div class="poc-metric"><span class="poc-metric-val">Predictive</span><span
+                                    class="poc-metric-lab">Model</span></div>
+                        </div>
+                        <div class="poc-tags">
+                            <span class="poc-tag">Stripe</span>
+                            <span class="poc-tag">ML</span>
+                            <span class="poc-tag">Laravel</span>
+                        </div>
+                    </div>
+                    <div class="poc-card-footer">
+                        <a href="#" class="poc-link poc-link-primary">Audit Log →</a>
+                        <a href="#" class="poc-link poc-link-ghost">GitHub 🐙</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Simple Footer -->
+    <footer class="footer-simple">
+        <div class="poc-container">
+            <p>&copy; 2025 Asif Shaikh — Built for scale.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Reveal on scroll
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        reveal(); // Initial call
+    </script>
+</body>
+
+</html>

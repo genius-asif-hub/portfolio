@@ -1,0 +1,12 @@
+{
+  "name": "Asif Shaikh — Senior Backend Engineer",
+  "short_name": "Asif.dev",
+  "description": "Senior Backend Engineer portfolio — Node.js, Laravel, Microservices, AI/RAG",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#030712",
+  "theme_color": "#6366f1",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}
