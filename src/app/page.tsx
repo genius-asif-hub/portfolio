@@ -1,6 +1,7 @@
 
 import Script from "next/script";
 import GitHubActivityCalendar from "./components/GitHubCalendar";
+import ContactForm from "./components/ContactForm";
 
 export default function Home() {
   return (
@@ -1051,41 +1052,7 @@ export default function Home() {
               </div>
               <div className="contact-form reveal-right">
                 <h3 style={{ fontSize: '1.1rem', fontWeight: 700, marginBottom: 24, color: 'var(--text-primary)' }}>Send a message</h3>
-                <form
-                  id="contactForm"
-                  action="https://formspree.io/f/mykogvjv"
-                  method="POST"
-                >
-                  <div className="form-row">
-                    <div className="form-group">
-                      <label htmlFor="fname">First Name</label>
-                      <input type="text" id="fname" placeholder="John" required />
-                    </div>
-                    <div className="form-group">
-                      <label htmlFor="lname">Last Name</label>
-                      <input type="text" id="lname" placeholder="Smith" required />
-                    </div>
-                  </div>
-                  <div className="form-group">
-                    <label htmlFor="email">Email Address</label>
-                    <input type="email" id="email" placeholder="john@company.com" required />
-                  </div>
-                  <div className="form-group">
-                    <label htmlFor="subject">Subject</label>
-                    <input type="text" id="subject" placeholder="Project inquiry / Role opportunity" />
-                  </div>
-                  <div className="form-group">
-                    <label htmlFor="message">Message</label>
-                    <textarea id="message" placeholder="Tell me about your project or what you're looking for..." required defaultValue={""} />
-                  </div>
-                  <button type="submit" className="form-submit" id="submitBtn">
-                    <span id="submitText">Send Message</span>
-                    <span id="submitIcon">→</span>
-                  </button>
-                  <p id="formSuccess" style={{ display: 'none', color: '#22c55e', fontSize: '0.85rem', marginTop: 12, textAlign: 'center' }}>
-                    ✅ Message sent! I'll get back to you within 24 hours.
-                  </p>
-                </form>
+                <ContactForm />
               </div>
             </div>
           </div>
