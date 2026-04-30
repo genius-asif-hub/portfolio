@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   // Update the base URL to your actual production domain once deployed
-  const baseUrl = 'https://portfolio-six-azure-ozatixs799.vercel.app';
+  const baseUrl = 'https://genius-asif.vercel.app';
 
   return [
     {
