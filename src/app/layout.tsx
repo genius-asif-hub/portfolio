@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Script from 'next/script';
 import './globals.css';
 
-const BASE_URL = 'https://your-portfolio-domain.com'; // ← update after Vercel deploy
+const BASE_URL = 'https://portfolio-six-azure-ozatixs799.vercel.app';
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
